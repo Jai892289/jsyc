@@ -165,7 +165,7 @@ const handleLogin = (e: React.FormEvent) => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleLogin} className="space-y-0">
+          <form onSubmit={handleLogin} className="space-y-6">
 
             <div>
               <label className="block text-sm font-semibold text-slate-900 mb-2">
