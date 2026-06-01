@@ -12,7 +12,6 @@ export default function HomePage() {
       <Hero />
            <StatsSection />
       <VisionMission />
-      <Stats />
             <CentersSection />
 
       <Courses />

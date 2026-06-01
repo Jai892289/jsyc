@@ -7,6 +7,7 @@ import {
   Heart,
   ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 
 const courses = [
   {
@@ -55,7 +56,7 @@ export default function Courses() {
         {/* Heading */}
         <div className="text-center mb-14">
           <h2 className="text-3xl font-bold text-slate-900">
-            Featured Courses
+            Featured Courses 
           </h2>
 
           <p className="mt-4 text-md text-slate-500">
@@ -72,7 +73,7 @@ export default function Courses() {
             return (
               <div
                 key={course.title}
-                className="group bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                className="group bg-white border border-slate-200 rounded-3xl p-8 shadow-sm  hover:border-blue-400 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
               >
                 <div className="flex justify-between items-start">
 
@@ -106,9 +107,9 @@ export default function Courses() {
 
         {/* Optional View All Button */}
         <div className="flex justify-center mt-14">
-          <button className="px-8 py-3 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 font-medium">
+          <Link href="/courses" className="px-8 py-3 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 font-medium">
             View All Courses
-          </button>
+          </Link>
         </div>
 
       </div>

@@ -119,11 +119,26 @@ const adminMenus = [
     href: "/admin/payment",
     icon: CreditCard,
   },
-//   {
-//     name: "Settings",
-//     href: "/admin/settings",
-//     icon: Settings,
-//   },
+  {
+    name: "Center Management",
+    href: "/admin/center",
+    icon: Building2,
+  },
+   {
+    name: "News Management",
+    href: "/admin/news",
+    icon: Building2,
+  },
+   {
+    name: "Tender Management",
+    href: "/admin/tender",
+    icon: Building2,
+  },
+   {
+    name: "Notification Center",
+    href: "/admin/notification",
+    icon: Building2,
+  },
 ];
 
 export default function Sidebar() {
@@ -152,8 +167,7 @@ const handleLogout = () => {
       : studentMenus;
 
   return (
-    <aside className="w-56 bg-blue-700 text-white flex flex-col">
-
+<aside className="w-[240px] shrink-0 bg-blue-700 text-white flex flex-col">
       {/* Logo */}
       <div className="h-14 px-3 flex items-center border-b border-blue-600">
 
@@ -174,7 +188,7 @@ const handleLogout = () => {
       </div>
 
       {/* Menu */}
-      <nav className="flex-1 p-2 space-y-1">
+      <nav className="flex-1 p-1 space-y-1">
 
         {menus.map((menu) => {
           const Icon = menu.icon;
@@ -199,7 +213,7 @@ const handleLogout = () => {
                 }
               `}
             >
-              <Icon size={16} />
+              <Icon size={14} />
 
               <span>{menu.name}</span>
             </Link>
@@ -209,7 +223,7 @@ const handleLogout = () => {
       </nav>
 
       {/* Logout */}
-      <div className="p-2 border-t border-blue-600">
+      <div className="p-1 border-t border-blue-600">
 
        <button
   onClick={handleLogout}

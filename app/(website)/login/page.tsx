@@ -41,7 +41,7 @@ const handleLogin = (e: React.FormEvent) => {
       })
     );
 
-    router.push("/dashboard");
+    router.push("/student/dashboard");
     return;
   }
 
@@ -103,16 +103,16 @@ const handleLogin = (e: React.FormEvent) => {
 };
 
   return (
-    <div className="min-h-screen bg-[#edf6f8] flex items-center justify-center px-4 py-6">
-      <div className="w-full max-w-[480px]">
+    <div className="min-h-screen bg-[#edf6f8] flex items-center justify-center -mt-10">
+      <div className="w-full max-w-[450px]">
 
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-slate-900">
+        <div className="text-center mb-4">
+          <h1 className="text-2xl font-bold text-slate-900">
             Welcome Back
           </h1>
 
-          <p className="mt-2 text-lg text-slate-500">
+          <p className="mt-2 text-md text-slate-500">
             Login to access your dashboard
           </p>
         </div>
@@ -165,7 +165,7 @@ const handleLogin = (e: React.FormEvent) => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleLogin} className="space-y-6">
+          <form onSubmit={handleLogin} className="space-y-0">
 
             <div>
               <label className="block text-sm font-semibold text-slate-900 mb-2">

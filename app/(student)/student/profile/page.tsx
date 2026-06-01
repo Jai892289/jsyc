@@ -6,7 +6,7 @@ export default function ProfilePage() {
 
       {/* Header */}
       <div>
-        <h1 className="text-xl font-bold text-slate-900">
+        <h1 className="text-xl font-semibold text-slate-900">
           My Profile
         </h1>
 

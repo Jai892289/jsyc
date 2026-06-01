@@ -4,6 +4,7 @@ import {
   Building2,
   BadgeCheck,
 } from "lucide-react";
+import Image from "next/image";
 
 const stats = [
   {
@@ -34,25 +35,40 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="relative overflow-hidden py-10 bg-gradient-to-b from-slate-50 to-white">
+    <section className="relative overflow-hidden py-12 bg-gradient-to-b from-slate-50 to-white">
+  {/* Background Pattern */}
+  <div className="absolute inset-0 opacity-[0.03]">
+    <div
+      className="w-full h-full"
+      style={{
+        backgroundImage:
+          "radial-gradient(#2563eb 1px, transparent 1px)",
+        backgroundSize: "30px 30px",
+      }}
+    />
+  </div>
 
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage:
-              "radial-gradient(#2563eb 1px, transparent 1px)",
-            backgroundSize: "30px 30px",
-          }}
+  <div className="relative max-w-7xl mx-auto px-6">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+      {/* Left Side Image */}
+
+      <div className="flex justify-center">
+        <Image
+          src="/img3.png"
+          alt="JSYC"
+          width={700}
+          height={550}
+          className="rounded-3xl shadow-xl w-full h-auto"
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      {/* Right Side Content */}
 
+      <div>
         {/* Heading */}
-        <div className="text-center mb-16">
 
+        <div className="mb-10">
           <span className="inline-flex rounded-full bg-blue-50 text-blue-700 px-4 py-2 text-sm font-medium">
             Platform Statistics
           </span>
@@ -61,15 +77,15 @@ export default function StatsSection() {
             Making Impact Across Jharkhand
           </h2>
 
-          <p className="mt-5 text-lg text-slate-500 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg text-slate-500">
             Empowering students, teachers, and institutions
             through modern education and digital innovation.
           </p>
-
         </div>
 
         {/* Stats Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div className="grid grid-cols-2 gap-5">
 
           {stats.map((item, index) => {
             const Icon = item.icon;
@@ -83,45 +99,40 @@ export default function StatsSection() {
                   rounded-3xl
                   border
                   border-slate-200
-                  p-8
-                  text-center
+                  p-6
                   shadow-sm
-                  hover:shadow-2xl
-                  hover:-translate-y-2
+                  hover:shadow-xl
+                  hover:-translate-y-1
                   transition-all
-                  duration-300
                 "
               >
                 <div
                   className={`
-                    w-20 h-20 mx-auto rounded-2xl
+                    w-14 h-14 rounded-2xl
                     bg-gradient-to-r ${item.color}
                     flex items-center justify-center
                     shadow-lg
-                    group-hover:scale-110
-                    transition-transform
-                    duration-300
                   `}
                 >
-                  <Icon className="w-8 h-8 text-white" />
+                  <Icon className="w-6 h-6 text-white" />
                 </div>
 
-                <h3 className="mt-8 text-3xl font-extrabold text-slate-900">
+                <h3 className="mt-5 text-3xl font-bold text-slate-900">
                   {item.value}
                 </h3>
 
-                <p className="mt-3 text-slate-600 font-medium">
+                <p className="mt-2 text-slate-600 text-sm">
                   {item.label}
                 </p>
-
-                <div className="w-12 h-1 bg-blue-600 rounded-full mx-auto mt-5 opacity-70" />
               </div>
             );
           })}
 
         </div>
-
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
   );
 }

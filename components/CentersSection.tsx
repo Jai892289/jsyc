@@ -3,6 +3,7 @@ import {
   ArrowRight,
   Building2,
 } from "lucide-react";
+import Link from "next/link";
 
 const centers = [
   {
@@ -49,7 +50,7 @@ export default function CentersSection() {
           {centers.map((center, index) => (
             <div
               key={index}
-              className="group bg-white rounded-3xl border border-slate-200 p-7 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              className="group bg-white rounded-3xl border border-slate-200 p-7 shadow-sm hover:shadow-2xl hover:border-blue-400 hover:-translate-y-2 transition-all duration-300"
             >
               {/* Top */}
               <div className="flex justify-between items-start">
@@ -92,9 +93,9 @@ export default function CentersSection() {
 
         {/* Button */}
         <div className="flex justify-center mt-14">
-          <button className="bg-white border border-slate-300 px-8 py-4 rounded-xl font-medium hover:bg-slate-50 hover:shadow-md transition">
+          <Link href="/centers" className="bg-white border border-slate-300 px-8 py-4 rounded-xl font-medium hover:bg-slate-50 hover:shadow-md transition">
             View All Centers
-          </button>
+          </Link>
         </div>
 
       </div>

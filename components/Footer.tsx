@@ -42,7 +42,7 @@ export default function Footer() {
 
             </div>
 
-            <p className="mt-5 text-slate-400 leading-7">
+            <p className="mt-5 text-slate-400 leading-7 text-sm">
               Empowering education and skill development across
               Jharkhand through innovative digital learning
               solutions and quality teaching.
@@ -95,7 +95,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition text-sm"
                 >
                   Home
                 </Link>
@@ -104,7 +104,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition text-sm"
                 >
                   About Us
                 </Link>
@@ -113,7 +113,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/courses"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition text-sm"
                 >
                   Courses
                 </Link>
@@ -122,7 +122,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/centers"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition text-sm"
                 >
                   Centers
                 </Link>
@@ -131,7 +131,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition text-sm"
                 >
                   Contact Us
                 </Link>
@@ -148,7 +148,7 @@ export default function Footer() {
               Services
             </h4>
 
-            <ul className="space-y-3 text-slate-400">
+            <ul className="space-y-3 text-slate-400 text-sm">
               <li>Student Enrollment</li>
               <li>Teacher Registration</li>
               <li>Digital Learning</li>
@@ -166,10 +166,10 @@ export default function Footer() {
               Contact Us
             </h4>
 
-            <div className="space-y-4 text-slate-400">
+            <div className="space-y-4 text-slate-400 text-sm">
 
               <div className="flex gap-3">
-                <MapPin className="w-5 h-5 text-blue-400 mt-1 shrink-0" />
+                <MapPin className="w-5 h-5 text-blue-400 mt-0 shrink-0" />
                 <span>
                   Ranchi, Jharkhand, India
                 </span>
