@@ -1,11 +1,8 @@
-import Link from "next/link";
-import {
-  GraduationCap,
-  MapPin,
-  Phone,
-  Mail,
-} from "lucide-react";
+"use client";
 
+import Image from "next/image";
+import Link from "next/link";
+import { Send, MessageCircle } from "lucide-react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -15,146 +12,131 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 text-white">
+    <footer className="bg-black text-white">
+      <div className="max-w-[1400px] mx-auto px-8 py-10">
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr_1.2fr_1.2fr] gap-12">
 
           {/* Logo Section */}
           <div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-start gap-4">
 
-              <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center">
-                <GraduationCap className="w-6 h-6 text-white" />
-              </div>
+              <Image
+                src="/govjhar 3.svg"
+                alt="JSYC"
+                width={100}
+                height={80}
+                className="object-contain shrink-0"
+              />
 
               <div>
-                <h3 className="font-bold text-xl">
+                <h2 className="text-[#e6c65a] text-[28px] leading-tight">
                   JSYC Platform
-                </h3>
+                </h2>
 
-                <p className="text-xs text-slate-400">
-                  Government of Jharkhand
+                <p className="text-gray-300 text-[16px] leading-7 mt-1">
+                  Digital Enrolment &
+                  <br />
+                  Management
                 </p>
               </div>
 
             </div>
 
-            <p className="mt-5 text-slate-400 leading-7 text-sm">
-              Empowering education and skill development across
-              Jharkhand through innovative digital learning
-              solutions and quality teaching.
-            </p>
+            {/* Newsletter */}
+            <div className="mt-16">
 
-            {/* Social Icons */}
-            <div className="flex gap-3 mt-6">
+              <label className="block text-[14px] mb-3">
+                Newsletter
+              </label>
 
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-slate-700 hover:bg-blue-600 flex items-center justify-center transition-all duration-300"
-              >
-                <FaFacebookF size={16} />
-              </a>
+              <div className="relative max-w-[280px]">
 
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-slate-700 hover:bg-sky-500 flex items-center justify-center transition-all duration-300"
-              >
-                <FaTwitter size={16} />
-              </a>
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="
+                    w-full
+                    h-11
+                    rounded-full
+                    bg-white
+                    text-black
+                    px-5
+                    pr-14
+                    text-sm
+                    outline-none
+                  "
+                />
 
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-slate-700 hover:bg-pink-600 flex items-center justify-center transition-all duration-300"
-              >
-                <FaInstagram size={16} />
-              </a>
+                <button
+                  className="
+                    absolute
+                    right-1
+                    top-1
+                    w-9
+                    h-9
+                    rounded-full
+                    bg-[#3b82f6]
+                    flex
+                    items-center
+                    justify-center
+                  "
+                >
+                  <Send size={15} />
+                </button>
 
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-slate-700 hover:bg-blue-700 flex items-center justify-center transition-all duration-300"
-              >
-                <FaLinkedinIn size={16} />
-              </a>
+              </div>
 
             </div>
 
           </div>
 
-          {/* Quick Links */}
+          {/* Site Map */}
           <div>
 
-            <h4 className="text-lg font-semibold mb-5">
-              Quick Links
-            </h4>
+            <h3 className="text-[16px] font-semibold mb-5">
+              Site Map
+            </h3>
 
-            <ul className="space-y-3 text-slate-400">
+            <ul className="space-y-2 text-[14px] text-gray-300">
 
               <li>
-                <Link
-                  href="/"
-                  className="hover:text-white transition text-sm"
-                >
+                <Link href="/" className="hover:text-white">
                   Home
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/about"
-                  className="hover:text-white transition text-sm"
-                >
-                  About Us
+                <Link href="/services" className="hover:text-white">
+                  Services
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/courses"
-                  className="hover:text-white transition text-sm"
-                >
-                  Courses
+                <Link href="/about" className="hover:text-white">
+                  About City
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/centers"
-                  className="hover:text-white transition text-sm"
-                >
-                  Centers
+                <Link href="/departments" className="hover:text-white">
+                  Department's
                 </Link>
               </li>
 
               <li>
-                <Link
-                  href="/contact"
-                  className="hover:text-white transition text-sm"
-                >
-                  Contact Us
+                <Link href="/information" className="hover:text-white">
+                  Information
                 </Link>
               </li>
 
-            </ul>
+              <li>
+                <Link href="/others" className="hover:text-white">
+                  Other's
+                </Link>
+              </li>
 
-          </div>
-
-          {/* Services */}
-          <div>
-
-            <h4 className="text-lg font-semibold mb-5">
-              Services
-            </h4>
-
-            <ul className="space-y-3 text-slate-400 text-sm">
-              <li>Student Enrollment</li>
-              <li>Teacher Registration</li>
-              <li>Digital Learning</li>
-              <li>Training Programs</li>
-              <li>Online Assessment</li>
-              <li>Student Support</li>
             </ul>
 
           </div>
@@ -162,80 +144,104 @@ export default function Footer() {
           {/* Contact */}
           <div>
 
-            <h4 className="text-lg font-semibold mb-5">
-              Contact Us
-            </h4>
+            <h3 className="text-[16px] font-semibold mb-5">
+              Contact US
+            </h3>
 
-            <div className="space-y-4 text-slate-400 text-sm">
+            <div className="space-y-4">
 
-              <div className="flex gap-3">
-                <MapPin className="w-5 h-5 text-blue-400 mt-0 shrink-0" />
-                <span>
-                  Ranchi, Jharkhand, India
-                </span>
+              <div className="bg-white h-[82px] px-4 flex items-center justify-center">
+                <Image
+                  src="/footer1.svg"
+                  alt="Digital India"
+                  width={180}
+                  height={50}
+                  className="w-full h-[45px] object-contain"
+                />
               </div>
 
-              <div className="flex gap-3">
-                <Phone className="w-5 h-5 text-blue-400 shrink-0" />
-                <span>
-                  +91 98765 43210
-                </span>
-              </div>
-
-              <div className="flex gap-3">
-                <Mail className="w-5 h-5 text-blue-400 shrink-0" />
-                <span>
-                  support@jsyc.in
-                </span>
+              <div className="bg-white h-[82px] px-4 flex items-center justify-center">
+                <Image
+                  src="/footer2.svg"
+                  alt="Ministry"
+                  width={180}
+                  height={50}
+                  className="w-full h-[45px] object-contain"
+                />
               </div>
 
             </div>
 
           </div>
 
-        </div>
+          {/* Social */}
+          <div>
 
-        {/* Divider */}
-        <div className="border-t border-slate-700 mt-12 pt-8">
+            <h3 className="text-[16px] font-semibold mb-5">
+              Social
+            </h3>
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex gap-3 mb-6">
 
-            <p className="text-slate-400 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} JSYC Digital Platform.
-              All Rights Reserved.
-            </p>
-
-            {/* <div className="flex gap-6 text-sm text-slate-400">
-
-              <Link
-                href="/privacy-policy"
-                className="hover:text-white transition"
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-[#d85a00] flex items-center justify-center"
               >
-                Privacy Policy
-              </Link>
+                <FaFacebookF size={16} />
+              </a>
 
-              <Link
-                href="/terms"
-                className="hover:text-white transition"
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-[#d85a00] flex items-center justify-center"
               >
-                Terms of Service
-              </Link>
+                <FaInstagram size={16} />
+              </a>
 
-              <Link
-                href="/faq"
-                className="hover:text-white transition"
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-[#d85a00] flex items-center justify-center"
               >
-                FAQ
-              </Link>
+                <FaLinkedinIn size={16} />
+              </a>
 
-            </div> */}
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-[#d85a00] flex items-center justify-center"
+              >
+                <FaTwitter size={16} />
+              </a>
+
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-[#d85a00] flex items-center justify-center"
+              >
+                <MessageCircle size={16} />
+              </a>
+
+            </div>
+
+            <div className="bg-white h-[82px] px-4 flex items-center justify-center">
+              <Image
+                src="/footer3.svg"
+                alt="Swachh Bharat"
+                width={180}
+                height={50}
+                className="w-full h-[45px] object-contain"
+              />
+            </div>
 
           </div>
 
         </div>
 
-      </div>
+        {/* Bottom */}
+        <div className="border-t border-white/10 mt-10 pt-5">
+          <p className="text-center text-xs text-gray-400">
+            © 2026 JSYC | All Rights Reserved
+          </p>
+        </div>
 
+      </div>
     </footer>
   );
 }

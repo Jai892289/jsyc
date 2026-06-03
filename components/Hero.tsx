@@ -120,11 +120,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export default function Hero() {
-  const slides = ["/img1.png", "/img2.png"];
+  const slides = ["/Home1.png", "/Home2.png", "/Home3.png", "/Home4.png"];
 
   return (
-   <section className="bg-slate-100">
-  <div className=" mx-auto">
+   <section className="bg-[#e8dfc7] px-2">
+  <div className="mx-auto">
     <Swiper
       modules={[Autoplay, Pagination]}
       loop

@@ -50,16 +50,17 @@ const courses = [
 
 export default function Courses() {
   return (
-    <section className="bg-[#f8fafc] py-10">
+    <section className="bg-[#007234] py-10">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold text-slate-900">
+          
+          <h2 className="text-center text-4xl font-semibold text-white mb-7">
             Featured Courses 
           </h2>
 
-          <p className="mt-4 text-md text-slate-500">
+          <p className="mt-4 text-md text-white">
             Explore our wide range of courses designed for your success
           </p>
         </div>
