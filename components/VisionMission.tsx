@@ -117,7 +117,7 @@ export default function VisionMission() {
 
                 {/* Replace with your icon */}
                 <Image
-                  src="/miss1.png"
+                  src="/s1.svg"
                   alt="Mission"
                   width={60}
                   height={60}
@@ -136,10 +136,10 @@ export default function VisionMission() {
             <div className="p-6 min-h-[160px]">
 
               <p className="text-[15px] leading-8 text-gray-600">
-                To provide world-class educational infrastructure,
-                connect talented teachers with eager learners, and
-                deliver industry-relevant skill training that prepares
-                our youth for the challenges of tomorrow.
+                Empower youth through participation, awareness, and leadership opportunities.
+Promote skill development, innovation, and employability.
+Represent youth interests and aspirations in policy-making.
+Encourage social responsibility, cultural engagement, and community development.
               </p>
 
             </div>
@@ -156,7 +156,7 @@ export default function VisionMission() {
 
                 {/* Replace with your icon */}
                 <Image
-                  src="/miss2.png"
+                  src="/s2.svg"
                   alt="Vision"
                   width={60}
                   height={60}
@@ -175,10 +175,8 @@ export default function VisionMission() {
             <div className="p-6 min-h-[160px]">
 
               <p className="text-[15px] leading-8 text-gray-600">
-                To create a comprehensive digital ecosystem that
-                makes quality education and skill development
-                accessible to every citizen of Jharkhand,
-                fostering inclusive growth and empowerment.
+                To build an empowered, inclusive, and future-ready youth community that actively contributes to the social, cultural, and economic development of Jharkhand.
+
               </p>
 
             </div>

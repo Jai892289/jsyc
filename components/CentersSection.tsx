@@ -110,22 +110,22 @@ import Image from "next/image";
 
 const stats = [
   {
-    icon: "/stats1.png",
+    icon: "/c1.svg",
     value: "25 k+",
     label: "Students Enrolled",
   },
   {
-    icon: "/stats2.png",
+    icon: "/c2.svg",
     value: "500+",
     label: "Expert Teachers",
   },
   {
-    icon: "/stats3.png",
+    icon: "/c3.svg",
     value: "50+",
     label: "Learning Centres",
   },
   {
-    icon: "/stats4.png",
+    icon: "/c4.svg",
     value: "95%",
     label: "Success Rate",
   },

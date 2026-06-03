@@ -141,38 +141,55 @@ export default function Footer() {
 
           </div>
 
+
           {/* Contact */}
-          <div>
+<div>
+  <h3 className="text-[16px] font-semibold mb-5">
+    Contact Us
+  </h3>
 
-            <h3 className="text-[16px] font-semibold mb-5">
-              Contact US
-            </h3>
+  <div className="space-y-5 text-gray-300 text-[14px]">
 
-            <div className="space-y-4">
+    <div>
+      <p className="text-white font-medium mb-1">
+        Head Office
+      </p>
+      <p className="leading-6">
+        JSYC Platform,
+        <br />
+        Ranchi, Jharkhand,
+        <br />
+        India - 834001
+      </p>
+    </div>
 
-              <div className="bg-white h-[82px] px-4 flex items-center justify-center">
-                <Image
-                  src="/footer1.svg"
-                  alt="Digital India"
-                  width={180}
-                  height={50}
-                  className="w-full h-[45px] object-contain"
-                />
-              </div>
+    <div>
+      <p className="text-white font-medium mb-1">
+        Phone
+      </p>
+      <p>+91 98765 43210</p>
+      <p>+91 91234 56789</p>
+    </div>
 
-              <div className="bg-white h-[82px] px-4 flex items-center justify-center">
-                <Image
-                  src="/footer2.svg"
-                  alt="Ministry"
-                  width={180}
-                  height={50}
-                  className="w-full h-[45px] object-contain"
-                />
-              </div>
+    <div>
+      <p className="text-white font-medium mb-1">
+        Email
+      </p>
+      <p>info@jsyc.in</p>
+      <p>support@jsyc.in</p>
+    </div>
 
-            </div>
+    <div>
+      <p className="text-white font-medium mb-1">
+        Working Hours
+      </p>
+      <p>Mon - Sat : 9:00 AM - 6:00 PM</p>
+    </div>
 
-          </div>
+  </div>
+</div>
+
+        
 
           {/* Social */}
           <div>
@@ -228,6 +245,24 @@ export default function Footer() {
                 height={50}
                 className="w-full h-[45px] object-contain"
               />
+
+              {/* <div className="bg-white h-[82px] px-4 flex items-center justify-center"> */}
+                <Image
+                  src="/footer1.svg"
+                  alt="Digital India"
+                  width={180}
+                  height={50}
+                  className="w-full h-[45px] object-contain"
+                />
+              {/* </div> */}
+
+                <Image
+                  src="/footer2.svg"
+                  alt="Ministry"
+                  width={180}
+                  height={50}
+                  className="w-full h-[45px] object-contain"
+                />
             </div>
 
           </div>

@@ -120,7 +120,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export default function Hero() {
-  const slides = ["/Home1.png", "/Home2.png", "/Home3.png", "/Home4.png"];
+  const slides = ["/Home6.png", "/Home7.png", "/Home8.png", "/Home9.png"];
 
   return (
    <section className="bg-[#e8dfc7] px-2">

@@ -103,7 +103,7 @@ const handleLogin = (e: React.FormEvent) => {
 };
 
   return (
-    <div className="min-h-screen bg-[#edf6f8] flex items-center justify-center -mt-10">
+    <div className="min-h-screen bg-[#edf6f8] flex items-center justify-center">
       <div className="w-full max-w-[450px]">
 
         {/* Header */}
