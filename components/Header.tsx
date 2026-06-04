@@ -1,22 +1,52 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X, Clock3, Phone, HelpCircle } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
-
+import {
+  Menu,
+  X,
+  Clock3,
+  Phone,
+  HelpCircle,
+  ChevronDown,
+} from "lucide-react";
 export default function Header() {
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  const navItems = [
-    { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
-    { label: "Centers", href: "/centers" },
-    { label: "Notice", href: "/notice" },
-    { label: "News & Events", href: "/news" },
-    { label: "Tender", href: "/tender" },
-    { label: "Contact Us", href: "/contact" },
-  ];
+const navItems = [
+  { label: "Home", href: "/" },
+
+  {
+    label: "About Us",
+    href: "/about",
+    submenu: [
+      { label: "Introduction", href: "/about" },
+      { label: "Mission & Vision", href: "/about#vision" },
+      { label: "Department Structure", href: "/department-structure" },
+      { label: "Administrative Desk", href: "/administrative" },
+    ],
+  },
+
+  { label: "Centres", href: "/centers" },
+
+  { label: "Notice", href: "/notice" },
+
+  {
+    label: "News & Events",
+    href: "/news",
+    submenu: [
+      { label: "News", href: "/news" },
+      { label: "Image Gallery", href: "/gallery" },
+      { label: "Circular", href: "/circular" },
+      { label: "Events", href: "/events" },
+    ],
+  },
+
+  { label: "Tender", href: "/tender" },
+
+  { label: "Contact Us", href: "/contact" },
+];
 
   return (
     <header className="w-full bg-white">
@@ -68,8 +98,7 @@ export default function Header() {
 
       {/* Navbar */}
       <div className="p-2">
-        <div className="h-[78px] bg-[#007a2f] rounded-[18px] overflow-hidden flex items-center">
-
+<div className="relative z-50 h-[78px] bg-[#007a2f] rounded-[18px] overflow-visible flex items-center">
           {/* Logo Section */}
           <div className="flex h-full shrink-0">
 
@@ -114,25 +143,82 @@ export default function Header() {
           </div>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex flex-1 justify-center items-center gap-10">
+          <nav className="hidden lg:flex flex-1 justify-center items-center gap-8">
 
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="
-                  text-white
-                  text-[15px]
-                  font-medium
-                  hover:text-[#f3d86b]
-                  transition
-                "
-              >
-                {item.label}
-              </Link>
-            ))}
+  {navItems.map((item) => (
+    <div
+      key={item.label}
+      className="relative group"
+    >
+      <Link
+        href={item.href}
+        className="
+          text-white
+          text-[15px]
+          font-medium
+          hover:text-[#f3d86b]
+          transition
+          flex
+          items-center
+          gap-1
+          py-6
+        "
+      >
+        {item.label}
 
-          </nav>
+        {item.submenu && (
+          <ChevronDown size={15} />
+        )}
+      </Link>
+
+      {item.submenu && (
+        <div
+          className="
+            absolute
+            left-0
+            top-full
+            min-w-[220px]
+            bg-[#007a2f]
+            rounded-xl
+            overflow-hidden
+            shadow-2xl
+            border-2
+            border-[#ecf1aa]
+            opacity-0
+            invisible
+            group-hover:opacity-100
+            group-hover:visible
+            transition-all
+            duration-200
+            z-50
+          "
+        >
+          {item.submenu.map((sub) => (
+            <Link
+              key={sub.href}
+              href={sub.href}
+              className="
+                block
+                px-4
+                py-3
+                text-white
+                text-sm
+                hover:bg-[#dfc354]
+                hover:text-black
+                border-b
+                border-white/10
+                last:border-none 
+              "
+            >
+              {sub.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  ))}
+
+</nav>
 
           {/* Right Side */}
           <div className="hidden lg:flex items-center gap-5 pr-5">
@@ -184,15 +270,31 @@ export default function Header() {
             <div className="flex flex-col gap-3">
 
               {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-white py-2"
-                  onClick={() => setMobileMenu(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
+  <div key={item.label}>
+    <Link
+      href={item.href}
+      className="text-white py-2 block"
+      onClick={() => setMobileMenu(false)}
+    >
+      {item.label}
+    </Link>
+
+    {item.submenu && (
+      <div className="ml-4 border-l border-white/20 pl-3">
+        {item.submenu.map((sub) => (
+          <Link
+            key={sub.href}
+            href={sub.href}
+            className="block text-white/80 text-sm py-1"
+            onClick={() => setMobileMenu(false)}
+          >
+            {sub.label}
+          </Link>
+        ))}
+      </div>
+    )}
+  </div>
+))}
 
               <Link
                 href="/login"
