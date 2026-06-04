@@ -40,7 +40,7 @@ export default function DepartmentStructure() {
         {/* Title */}
                 <h2 className="text-center text-4xl font-semibold text-black mb-15">
 
-          Department Structure
+          Commission Structure
         </h2>
 
         <div className="relative">
@@ -48,10 +48,10 @@ export default function DepartmentStructure() {
           {/* Top Row */}
           <div className="flex justify-center gap-10">
 
-            <PersonCard
+            {/* <PersonCard
               name="Shri. Hemant Soren"
               role="Chief Minister"
-            />
+            /> */}
 
             <PersonCard
               name="--"
