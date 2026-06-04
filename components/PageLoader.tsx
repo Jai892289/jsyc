@@ -64,7 +64,7 @@ export default function PageLoader() {
       {/* Loading Text */}
       <div className="absolute bottom-[20%] text-center">
         <p className="text-slate-700 font-medium text-lg">
-          Jharkhand Skill Development Mission
+          Jharkhand State Youth Commission
         </p>
 
         <p className="text-slate-400 text-sm mt-1">

@@ -5,19 +5,19 @@ import { Phone, Mail } from "lucide-react";
 
 const administrators = [
   {
-    name: "Shri.Devendra Fadnavis",
-    designation: "Deputy Chief Minister",
+    name: "Shri.Kumar Gaurav",
+    designation: "Chairman",
     description:
-      "Hon'ble Deputy Chief Minister, Bihar State and Guardian Minister, District Munger",
+      "Hon'ble Chairman",
     image: "/profile.png",
     phone: "+91 ********65",
     email: "xy@gmail.com",
   },
   {
-    name: "Shri.Devendra Fadnavis",
-    designation: "Deputy Chief Minister",
+    name: "Shri.Ved Ratna Mohan",
+    designation: "Administrative Joint secretary -cum-Member Secretary",
     description:
-      "Hon'ble Deputy Chief Minister, Bihar State and Guardian Minister, District Munger",
+      "Hon'ble Administrative Joint secretary",
     image: "/profile.png",
     phone: "+91 ********65",
     email: "xy@gmail.com",
@@ -59,9 +59,7 @@ export default function Administratives() {
                 "
               >
                 <h3 className="text-[18px] font-medium text-center leading-8 text-black">
-                  Shri.Devendra
-                  <br />
-                  Fadnavis
+{item.name}
                 </h3>
               </div>
 
