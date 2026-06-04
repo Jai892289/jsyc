@@ -1,19 +1,399 @@
-import {
-  Users,
-  GraduationCap,
-  Building2,
-  Award,
-  Eye,
-  Target,
-  CheckCircle,
-} from "lucide-react";
+import CTASection from "@/components/CTASection";
+import DepartmentStructure from "@/components/Department";
+import NoticeBar from "@/components/StatsSection";
+import { Check, Star } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <main>
+    <main className="bg-[#E8DFC7]">
+      <NoticeBar />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-800 to-cyan-700 text-white">
+      <Image src={"/About.svg"}
+        width={100}
+        height={100}
+        alt="image"
+        className="w-full p-2"
+      />
+
+      {/* Heading */}
+      <div className="p-8">
+        <h2 className=" text-4xl font-semibold text-black">
+          Our Story
+        </h2>
+
+        <p className="mt-3 text-base text-gray-700">
+          Jharkhand Rajya Yuva Aayog is a government-established body dedicated to empowering,
+          engaging, and representing the youth of Jharkhand. The Commission promotes
+          leadership, participation, skill development, and youth welfare while serving as
+          a vital link between young citizens and the Government. Through various initiatives
+          and policy support, it aims to create opportunities that enable the youth to
+          contribute actively to the state's growth and development.          </p>
+
+        <p className="mt-3 text-base text-gray-700">
+
+
+          The Commission works towards fostering youth participation in social, cultural,
+          educational, and developmental initiatives while acting as a bridge between young citizens and the Government. It strives to promote leadership, innovation, skill development, employment awareness, social responsibility, and inclusive growth among the youth of Jharkhand
+        </p>
+
+        <p className="mt-3 text-base text-gray-700">
+
+          Jharkhand Rajya Yuva Aayog continues to work towards building a vibrant, responsible, and future-ready generation that contributes meaningfully to the socio-economic growth of Jharkhand and the nation.
+        </p>
+      </div>
+
+
+        <div className="mx-8">
+                   
+              {/* Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-9">
+      
+                {/* Mission Card */}
+                <div className="bg-white rounded-2xl overflow-hidden shadow-sm h-60" >
+      
+                  {/* Header */}
+                  <div className="bg-[#007b2d] px-5 py-5 flex items-center gap-4">
+      
+                    <div className="w-16 h-16 flex items-center justify-center shrink-0">
+      
+                      {/* Replace with your icon */}
+                      <Image
+                        src="/s1.svg"
+                        alt="Mission"
+                        width={60}
+                        height={60}
+                        className="object-contain"
+                      />
+      
+                    </div>
+      
+                    <h3 className="text-[26px] font-semibold text-white">
+                      Mission
+                    </h3>
+      
+                  </div>
+      
+                  {/* Content */}
+                  <div className="p-6 min-h-[160px]">
+      
+                    <p className="text-[15px] leading-8 text-gray-600">
+                     To provide accessible, quality education and skill training to every citizen of Jharkhand.
+                    </p>
+      
+                  </div>
+      
+                </div>
+      
+                {/* Vision Card */}
+                <div className="bg-white rounded-2xl overflow-hidden shadow-sm h-60">
+      
+                  {/* Header */}
+                  <div className="bg-[#007b2d] px-5 py-5 flex items-center gap-4">
+      
+                    <div className="w-16 h-16 rounded-full  flex items-center justify-center shrink-0">
+      
+                      {/* Replace with your icon */}
+                      <Image
+                        src="/s2.svg"
+                        alt="Vision"
+                        width={60}
+                        height={60}
+                        className="object-contain"
+                      />
+      
+                    </div>
+      
+                    <h3 className="text-[26px] font-semibold text-white">
+                      Vision
+                    </h3>
+      
+                  </div>
+      
+                  {/* Content */}
+                  <div className="p-6 min-h-[160px]">
+      
+                    <p className="text-[15px] leading-8 text-gray-600">
+Building a skilled and educated Jharkhand for sustainable development      
+                    </p>
+      
+                  </div>
+      
+                </div>
+
+                {/* Excellence Card */}
+                <div className="bg-white rounded-2xl overflow-hidden shadow-sm h-60">
+      
+                  {/* Header */}
+                  <div className="bg-[#007b2d] px-5 py-5 flex items-center gap-4">
+      
+                    <div className="w-16 h-16 rounded-full  flex items-center justify-center shrink-0">
+      
+                      {/* Replace with your icon */}
+                      <Image
+                        src="/s2.svg"
+                        alt="Vision"
+                        width={60}
+                        height={60}
+                        className="object-contain"
+                      />
+      
+                    </div>
+      
+                    <h3 className="text-[26px] font-semibold text-white">
+                      Excellence
+                    </h3>
+      
+                  </div>
+      
+                  {/* Content */}
+                  <div className="p-6 min-h-[160px]">
+      
+                    <p className="text-[15px] leading-8 text-gray-600">
+Committed to maintaining the highest standards in education delivery      
+                    </p>
+      
+                  </div>
+      
+                </div>
+      
+              </div>
+
+
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-9 mt-5">
+      
+                {/* Accessibility Card */}
+                <div className="bg-white rounded-2xl overflow-hidden shadow-sm h-60" >
+      
+                  {/* Header */}
+                  <div className="bg-[#007b2d] px-5 py-5 flex items-center gap-4">
+      
+                    <div className="w-16 h-16 flex items-center justify-center shrink-0">
+      
+                      {/* Replace with your icon */}
+                      <Image
+                        src="/s1.svg"
+                        alt="Mission"
+                        width={60}
+                        height={60}
+                        className="object-contain"
+                      />
+      
+                    </div>
+      
+                    <h3 className="text-[26px] font-semibold text-white">
+                      Accessibility
+                    </h3>
+      
+                  </div>
+      
+                  {/* Content */}
+                  <div className="p-6 min-h-[160px]">
+      
+                    <p className="text-[15px] leading-8 text-gray-600">
+                     Making quality education available across all districts of Jharkhand
+                    </p>
+      
+                  </div>
+      
+                </div>
+      
+                {/* Community Card */}
+                <div className="bg-white rounded-2xl overflow-hidden shadow-sm h-60">
+      
+                  {/* Header */}
+                  <div className="bg-[#007b2d] px-5 py-5 flex items-center gap-4">
+      
+                    <div className="w-16 h-16 rounded-full  flex items-center justify-center shrink-0">
+      
+                      {/* Replace with your icon */}
+                      <Image
+                        src="/s2.svg"
+                        alt="Vision"
+                        width={60}
+                        height={60}
+                        className="object-contain"
+                      />
+      
+                    </div>
+      
+                    <h3 className="text-[26px] font-semibold text-white">
+                      Community
+                    </h3>
+      
+                  </div>
+      
+                  {/* Content */}
+                  <div className="p-6 min-h-[160px]">
+      
+                    <p className="text-[15px] leading-8 text-gray-600">
+Building a strong network of learners, teachers, and institutions      
+                    </p>
+      
+                  </div>
+      
+                </div>
+
+                {/* Impact Card */}
+                <div className="bg-white rounded-2xl overflow-hidden shadow-sm h-60">
+      
+                  {/* Header */}
+                  <div className="bg-[#007b2d] px-5 py-5 flex items-center gap-4">
+      
+                    <div className="w-16 h-16 rounded-full  flex items-center justify-center shrink-0">
+      
+                      {/* Replace with your icon */}
+                      <Image
+                        src="/s2.svg"
+                        alt="Vision"
+                        width={60}
+                        height={60}
+                        className="object-contain"
+                      />
+      
+                    </div>
+      
+                    <h3 className="text-[26px] font-semibold text-white">
+                      Impact
+                    </h3>
+      
+                  </div>
+      
+                  {/* Content */}
+                  <div className="p-6 min-h-[160px]">
+      
+                    <p className="text-[15px] leading-8 text-gray-600">
+Creating lasting positive change in the lives of our students      
+                    </p>
+      
+                  </div>
+      
+                </div>
+      
+              </div>
+      
+        </div>
+
+
+        <div className="m-8 ">
+      <div className="">
+
+        <div className="bg-[#eef3f6] rounded-[32px] px-10 md:px-16 py-8">
+
+          {/* Heading */}
+                  <h2 className=" text-center text-4xl font-semibold text-black mb-10">
+
+            Key Highlights
+          </h2>
+
+          {/* Content */}
+          <div className="grid md:grid-cols-2 gap-16">
+
+            {/* Left */}
+            <div>
+              <h3 className="text-2xl font-bold text-slate-800 mb-8">
+                What We Offer
+              </h3>
+
+              <div className="space-y-5">
+
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-blue-600 shrink-0" />
+                  <span className="text-[18px] text-slate-700">
+                    100+ courses across multiple disciplines
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-blue-600 shrink-0" />
+                  <span className="text-[18px] text-slate-700">
+                    Digital enrollment and management system
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-blue-600 shrink-0" />
+                  <span className="text-[18px] text-slate-700">
+                    Modern learning infrastructure
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-blue-600 shrink-0" />
+                  <span className="text-[18px] text-slate-700">
+                    Expert teachers and mentors
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Right */}
+            <div>
+              <h3 className="text-2xl font-bold text-slate-800 mb-8">
+                Our Achievements
+              </h3>
+
+              <div className="space-y-5">
+
+                <div className="flex items-center gap-3">
+                  <Star className="w-5 h-5 fill-teal-600 text-teal-600 shrink-0" />
+                  <span className="text-[18px] text-slate-700">
+                    25,000+ students successfully enrolled
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Star className="w-5 h-5 fill-teal-600 text-teal-600 shrink-0" />
+                  <span className="text-[18px] text-slate-700">
+                    95% student satisfaction rate
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Star className="w-5 h-5 fill-teal-600 text-teal-600 shrink-0" />
+                  <span className="text-[18px] text-slate-700">
+                    50+ centers across Jharkhand
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Star className="w-5 h-5 fill-teal-600 text-teal-600 shrink-0" />
+                  <span className="text-[18px] text-slate-700">
+                    Government recognized certification
+                  </span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+        </div>
+
+
+<DepartmentStructure />
+<CTASection />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-800 to-cyan-700 text-white">
 
         <div className="absolute inset-0 opacity-10">
           <div
@@ -46,7 +426,6 @@ export default function AboutPage() {
 
       </section>
 
-      {/* Story */}
       <section className="py-24 bg-white">
 
         <div className="max-w-7xl mx-auto px-6">
@@ -132,7 +511,6 @@ export default function AboutPage() {
 
       </section>
 
-      {/* Vision Mission */}
       <section className="py-24 bg-slate-50">
 
         <div className="max-w-7xl mx-auto px-6">
@@ -179,7 +557,6 @@ export default function AboutPage() {
 
       </section>
 
-      {/* Why Choose Us */}
       <section className="py-24 bg-white">
 
         <div className="max-w-7xl mx-auto px-6">
@@ -220,7 +597,6 @@ export default function AboutPage() {
 
       </section>
 
-      {/* CTA */}
       <section className="bg-gradient-to-r from-blue-800 to-cyan-700 text-white py-20">
 
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -240,7 +616,7 @@ export default function AboutPage() {
 
         </div>
 
-      </section>
+      </section> */}
 
     </main>
   );

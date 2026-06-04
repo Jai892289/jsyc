@@ -15,12 +15,11 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-           <StatsSection />
+      <StatsSection />
       <VisionMission />
-            <CentersSection />
-            <ImportantDesk />
-            <Administratives />
-
+      <CentersSection />
+      <ImportantDesk />
+      <Administratives />
       <Courses />
       <HeroCentersSection />
       <CTASection />
